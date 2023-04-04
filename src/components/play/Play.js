@@ -6,9 +6,9 @@ import IMG3 from '../../assets/miramar.jpg'
 import IMG4 from '../../assets/tdm.jpg'
 const Play = () => {
   return (
-    <section id='play'>
-    <h5>You can register here</h5>
-    <h2>Play</h2>
+    <section id='play' bgcolor="blue">
+    <h5 align="center">You can register here</h5>
+    <h2 align="center">Play</h2>
     
     <div className='container play_container'>
       <article className='play_item'>

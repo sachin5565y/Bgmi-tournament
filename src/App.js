@@ -1,14 +1,14 @@
-import Play from './component/play/Play';
-import Header from './component/header/Header.js'
-import About from './component/about/About.js';
-import Footer from './component/footer/Footer'
-import Navbar from './component/Navbar';
-import Login from './component/user/Login';
-import Signup from './component/user/Signup';
-import Alert from './component/Alert';
+import './App.css';
+import { useState } from 'react'
+import Home from './components/Home';
+import About from './components/About';
+import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NoteState from './component/context/notes/NoteState';
-import { useState } from 'react';
+import NoteState from './components/context/notes/NoteState';
+import Alert from './components/Alert';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Play from './components/play/Play';
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -22,23 +22,24 @@ function App() {
   }
   return (
     <>
-      <NoteState>
+    <NoteState>
       <Router>
-          <Navbar   />
-          <Alert alert={alert} />
-          <div className='conatainer'>
-            <Routes>
-              <Route path='/' element={<Header  showAlert={showAlert}/>}/>
-              <Route path='/play' element={<Play/>}/>
-              <Route path='/login' element={<Login  showAlert={showAlert}/>}/>
-              <Route path='/signup' element={<Signup showAlert={showAlert} />}/>
-              <Route path='/about' element={<About/>}/>
-            </Routes>
-          </div>
-         <Footer/>
-        </Router>
-        </NoteState>
-    </>
+        <Navbar  />
+        <Alert alert={alert} />
+        <div className='conatainer'>
+          <Routes>
+            <Route path='/' element={<Home showAlert={showAlert}  ></Home>}></Route>
+            <Route path='/about' element={<About></About>}></Route>
+            <Route path='/play' element={<Play></Play>}></Route>
+            
+            <Route path='/login' element={<Login showAlert={showAlert}></Login >}></Route>
+            <Route path='/signup' element={<Signup showAlert={showAlert}></Signup >}></Route>
+          </Routes>
+        </div>
+      </Router>
+    </NoteState>
+
+  </>
   );
 }
 
