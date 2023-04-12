@@ -13,7 +13,7 @@ const NoteState = (props)=>{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQyNmY5ZjgzMzk2YTJiNzJiM2IzOWU4In0sImlhdCI6MTY4MDUzODEzM30.hL-puCehWCblYJTYjL6cERW3WNoXClJ2KVcAGsmMQ7w"
+        "auth-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQyNmY5ZjgzMzk2YTJiNzJiM2IzOWU4In0sImlhdCI6MTY4MDUzODEzM30.hL-puCehWCblYJTYjL6cERW3WNoXClJ2KVcAGsmMQ7w"
         // "auth-token": localStorage.getItem('token')
         
       }

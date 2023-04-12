@@ -35,7 +35,7 @@ const AddNote = (props) => {
                 
                 <button disabled={note.name.length<5||note.id.length<5} type="submit" className="btn btn-primary"onClick={handleClick} minLength={5} required >Add Note</button>
             </form>
-            
+             
         </div>
         </>
   )

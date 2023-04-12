@@ -24,13 +24,11 @@ const Navbar = (props) => {
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
         </li>
-        <li className="nav-item">
-          <Link className={`nav-link ${location.pathname === "/play" ? "active" : ""}`} to="/play">Play</Link>
-        </li>
+       
         
         
       </ul>
-      {localStorage.getItem('token') ? <form className="d-flex">
+      {!localStorage.getItem('token') ? <form className="d-flex">
                         <Link className="btn btn-primary mx-2" to="/login" role="button">Login</Link>
                         <Link className="btn btn-primary mx-1`" to="signup" role="button">Signup</Link>
                     </form> :<button className='btn btn-primary' onClick={handleLogout}>Logout</button> }

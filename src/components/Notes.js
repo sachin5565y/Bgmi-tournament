@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import noteContext from "../components/context/notes/noteContext"
 import Noteitem from './Noteitems';
-import AddNote from './AddNote';
+
+import Play from './play/Play';
 
 const Notes = (props) => {
     const context = useContext(noteContext);
@@ -13,7 +14,7 @@ const Notes = (props) => {
 
     return (
         <>
-            <AddNote showAlert={props.showAlert}/>
+            <Play showAlert={props.showAlert}/>
             <div className="row my-3">
                 <h2>You have Register for Erangel Tournament</h2>
                 <div className='container mx-2'>
